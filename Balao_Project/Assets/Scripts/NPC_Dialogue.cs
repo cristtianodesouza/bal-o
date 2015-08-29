@@ -56,14 +56,7 @@ public class NPC_Dialogue : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D outro){
 		OnInteract = false;
 		bln_txt.around = false;
-
-		//destruiçao dos icones criados pelo NPC.
-
-		GameObject[] ballon_icon =  GameObject.FindGameObjectsWithTag("Icon");
-		foreach (GameObject icon in ballon_icon){
-			Destroy (icon);
-		}
-
+		Destroy (GameObject.FindWithTag("Icon"));
 	}
 
 	/*
