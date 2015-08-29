@@ -5,6 +5,7 @@ public class Bal_Dialogue : MonoBehaviour {
 	
 	public Transform Ballon;
 	public bool around;
+	public Sprite npc_bln;
 
 	private float plr_x;
 	private float self_x;

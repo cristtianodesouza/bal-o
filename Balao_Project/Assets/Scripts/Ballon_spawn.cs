@@ -2,62 +2,89 @@
 using System.Collections;
 
 public class Ballon_spawn : MonoBehaviour {
-	//intervalo de tempo para a instanciaçao dos simbolos no balao
-	public float interval_time;
 
-	//tres simbolos que surgiram no balao
-	public GameObject first_symbol;
-	public GameObject second_symbol;
-	public GameObject third_symbol;
-
-	//
+	public Sprite[] lequal;
+	private Sprite final;
+	private Sprite last_j;
 	private float resize;
 	private Transform self_parent;
-	private float begin_time;
-	private Transform teste;
-	//bolleanos que determinam a criaçao das instancias
-	private bool first_instantiate;
-	private bool second_instantiate;
-	private bool third_instantiate;
+	//GameObject[] obj;
+	NPC_Dialogue npc_dial;
+	Bal_Dialogue bal_dial;
+	float tempo_criaçao;
+	float tempo_intervalo = 1.5f;
+	bool[] create = new bool[] {false,false,false,false};
 
-	//x e y de nascimento dos signos
-	public Transform position_intantiate;
 	// Use this for initialization
 	void Start () {
 		resize = 0;
+		tempo_criaçao = Time.time;
+		//print (tempo_criaçao);
+
+
 		self_parent = GameObject.FindGameObjectWithTag("NPC").GetComponent<Transform>();
-
-		begin_time = Time.time;
-		first_instantiate = false;
-		second_instantiate = false;
-     	third_instantiate = false;
-
+		npc_dial = GameObject.FindGameObjectWithTag("Player").GetComponent<NPC_Dialogue>();
+		bal_dial = GameObject.FindGameObjectWithTag("Dial").GetComponent<Bal_Dialogue>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 		resize = Mathf.Lerp(resize,1,0.05f);
 		if (resize >= 0.999f){
 			resize = 1;
 		}
 		transform.localScale = new Vector2 (resize * -self_parent.transform.localScale.x,resize);
 
+		if(tempo_intervalo < Time.time - tempo_criaçao &&!(create[0])){
+			GameObject obj_1 = new GameObject();
+			obj_1.AddComponent<SpriteRenderer>();
+			obj_1.GetComponent<SpriteRenderer>().sprite = npc_dial.plr_bln;
+			obj_1.transform.parent = transform;
+			obj_1.transform.position = new Vector2 (transform.position.x + (0.8f * transform.localScale.x),transform.position.y + 1.6f);
+			obj_1.transform.localScale = new Vector2 (1f,1f);
+			create[0] = true;
+		}
+		if(tempo_intervalo*2 < Time.time - tempo_criaçao &&!(create[1])){
+			GameObject obj_2 = new GameObject();
+			obj_2.AddComponent<SpriteRenderer>();
+			obj_2.GetComponent<SpriteRenderer>().sprite = bal_dial.npc_bln;
+			obj_2.transform.parent = transform;
+			obj_2.transform.position = new Vector2 (transform.position.x + (2.4f * transform.localScale.x),transform.position.y + 1.6f);
+			obj_2.transform.localScale = new Vector2 (1f,1f);
+			create[1] = true;
+		}
+		if(tempo_intervalo*3 < Time.time - tempo_criaçao &&!(create[2])){
 
-		if ((Time.time - begin_time > interval_time)&& !(first_instantiate)){
-			print ("teste primeira instanciaçao");
-			Instantiate (first_symbol,new Vector2(position_intantiate.position.x-0.8f,position_intantiate.position.y),Quaternion.identity);
-			first_instantiate = true;
+
+			if ((npc_dial.plr_bln) == (bal_dial.npc_bln)){
+				final = lequal[0];
+				last_j = lequal[2];
+			} else {
+				final = lequal[1];
+				last_j = lequal[3];
+			}
+			GameObject obj_3 = new GameObject();
+			obj_3.AddComponent<SpriteRenderer>();
+			obj_3.GetComponent<SpriteRenderer>().sprite = final;
+			obj_3.transform.parent = transform;
+			obj_3.transform.position = new Vector2 (transform.position.x + (1.6f * transform.localScale.x),transform.position.y + 1.6f);
+			obj_3.transform.localScale = new Vector2 (1f,1f);
+
+			GameObject obj_4 = new GameObject();
+			obj_4.AddComponent<SpriteRenderer>();
+			obj_4.GetComponent<SpriteRenderer>().sprite = last_j;
+			obj_4.transform.parent = transform;
+			obj_4.transform.position = new Vector2 (transform.position.x - (-1.6f * transform.localScale.x),transform.position.y);
+			if (self_parent.transform.localScale.x < 0){
+				obj_4.transform.localScale = new Vector2 (1f,1f);
+			} else if (self_parent.transform.localScale.x > 0){
+				obj_4.transform.localScale = new Vector2 (-1f,1f);
+			}
+			create[2] = true;
 		}
-		if ((Time.time - begin_time > interval_time+0.5f)&& !(second_instantiate)) {
-			print ("teste segunda instanciaçao");
-			Instantiate (second_symbol,new Vector2(position_intantiate.position.x,position_intantiate.position.y),Quaternion.identity);
-			second_instantiate = true;
-		}
-		if ((Time.time - begin_time > interval_time+1.0f)&&!(third_instantiate)) {
-			print ("teste terceira instanciaçao");
-			Instantiate (third_symbol,new Vector2(position_intantiate.position.x+0.8f,position_intantiate.position.y),Quaternion.identity);;
-			third_instantiate = true;
+		if(tempo_intervalo*4 < Time.time - tempo_criaçao &&!(create[3])){
+			create[3] = true;
+			npc_dial.judge = true;
 		}
 	}
 }
