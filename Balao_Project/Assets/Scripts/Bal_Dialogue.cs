@@ -1,4 +1,30 @@
-﻿using UnityEngine;
+﻿/* Start{
+ * Esse script e usado para : 
+ * 
+ * Este script esta anexado a: 
+ * 
+ * Se comunica com os seguintes scripts :
+ * 
+ * - Nenhum script no momento
+ * 
+ * Esse script e exportado para os seguintes scripts :
+ * 
+ * - NPC_Dialog > variaveis :
+ *  º Ballon
+ *  º around
+ * 
+ * - Ballon_spawn > variaveis :
+ *  º npc_bln
+ * 
+ * - balao > variaveis :
+ *  º npc_bln
+ * 
+ *  AVISO: Por favor,ao fazer mudanças,entenda que as variaveis que sao exportadas,podem alterar o valor de outras variaveis em outros
+ *  scripts,entao tenha em mente que qualquer mudança nelas pode levar a erros.
+ * } End
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class Bal_Dialogue : MonoBehaviour {

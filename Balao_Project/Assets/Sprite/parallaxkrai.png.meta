@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 824050c8477009f488501fbb13a8865c
+guid: ae6553488fd1a4342989e47600ff5428
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BTN_Sprite_0
-    21300002: BTN_Sprite_1
+    21300000: parallaxkrai_0
+    21300002: parallaxkrai_1
+    21300004: parallaxkrai_2
+    21300006: parallaxkrai_3
+    21300008: parallaxkrai_3
+    21300010: parallaxkrai_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -39,29 +43,59 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 50
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BTN_Sprite_0
+    - name: parallaxkrai_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 2
-        width: 226
-        height: 252
+        x: 0
+        y: 2502
+        width: 2002
+        height: 603
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BTN_Sprite_1
+    - name: parallaxkrai_1
       rect:
         serializedVersion: 2
-        x: 265
-        y: 2
-        width: 238
-        height: 252
+        x: 0
+        y: 1947
+        width: 2202
+        height: 354
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: parallaxkrai_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1356
+        width: 2452
+        height: 450
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: parallaxkrai_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 690
+        width: 2802
+        height: 477
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: parallaxkrai_4
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 42
+        width: 1978
+        height: 618
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
