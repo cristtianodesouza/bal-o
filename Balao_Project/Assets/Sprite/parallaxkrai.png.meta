@@ -1,15 +1,13 @@
 fileFormatVersion: 2
-guid: 47edb475195927d4fb8814c54d483b2b
+guid: ae6553488fd1a4342989e47600ff5428
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spritesheet-run_0
-    21300002: spritesheet-run_1
-    21300004: spritesheet-run_2
-    21300006: spritesheet-run_0
-    21300008: spritesheet-run_4
-    21300010: spritesheet-run_5
-    21300012: spritesheet-run_0
-    21300014: spritesheet-run_3
+    21300000: parallaxkrai_0
+    21300002: parallaxkrai_1
+    21300004: parallaxkrai_2
+    21300006: parallaxkrai_3
+    21300008: parallaxkrai_3
+    21300010: parallaxkrai_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,71 +43,61 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 50
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: spritesheet-run_0
+    - name: parallaxkrai_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 33
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        y: 2502
+        width: 2002
+        height: 603
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-run_1
+    - name: parallaxkrai_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 1
-        width: 30
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 0
+        y: 1947
+        width: 2202
+        height: 354
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-run_2
+    - name: parallaxkrai_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 1
-        width: 26
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 0
+        y: 1356
+        width: 2452
+        height: 450
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-run_3
+    - name: parallaxkrai_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1
-        width: 29
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 0
+        y: 690
+        width: 2802
+        height: 477
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-run_4
+    - name: parallaxkrai_4
       rect:
         serializedVersion: 2
-        x: 132
-        y: 1
-        width: 31
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-run_5
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 1
-        width: 25
-        height: 55
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 169
+        y: 42
+        width: 1978
+        height: 618
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

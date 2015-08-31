@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: 824050c8477009f488501fbb13a8865c
+guid: 3cba4d073f85b5145b750ddd2fd76276
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: BTN_Sprite_0
-    21300002: BTN_Sprite_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,37 +31,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 175
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: BTN_Sprite_0
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 2
-        width: 226
-        height: 252
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BTN_Sprite_1
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 2
-        width: 238
-        height: 252
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
